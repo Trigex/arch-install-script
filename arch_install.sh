@@ -3,7 +3,7 @@
 # It probably won't setup the system the way you'd like, but feel free to modify
 # Expects MBR boot mode
 
-waitForUserInput() { read -n 1 -s -r -p "Press any key to continue" }
+waitForUserInput() { read -n 1 -s -r -p "Press any key to continue"; }
 
 installer() {
     echo "arch_installer.sh started..."
