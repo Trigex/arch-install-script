@@ -1,7 +1,7 @@
 #!/bin/bash
 # Chroot section of the install script
 
-waitForUserInput() { read -n 1 -s -r -p "Press any key to continue" }
+waitForUserInput() { read -n 1 -s -r -p "Press any key to continue"; }
 
 hostsTemplate = ""
 
