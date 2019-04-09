@@ -9,6 +9,7 @@ installer() {
     echo "arch_installer.sh started..."
     echo "Connect to wifi..."
     # get wifi connection
+    # this is a bit retarded since I probably already setup wifi to clone this repo on the live image but whatever
     waitForUserInput
     wifi-menu
     # ensure system clock is accurate
@@ -38,7 +39,9 @@ installer() {
     cp hosts_template /mnt
     # run chroot script
     arch-chroot /mnt ./arch_install_chroot.sh
-
+    # clean up
+    rm /mnt/arch_install_chroot
+    rm /mnt/hosts_template
     # reboot post chroot section
     reboot
 }
