@@ -40,7 +40,7 @@ installer() {
     # run chroot script
     arch-chroot /mnt ./arch_install_chroot.sh
     # clean up
-    rm /mnt/arch_install_chroot
+    rm /mnt/arch_install_chroot.sh
     rm /mnt/hosts_template
     # reboot post chroot section
     reboot
